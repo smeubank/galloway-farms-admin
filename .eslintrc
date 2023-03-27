@@ -21,7 +21,8 @@
     "plugin:vitest-globals/recommended"
   ],
   "globals": {
-    "__MEDUSA_BACKEND_URL__": true
+    "__MEDUSA_BACKEND_URL__": true,
+    "__SENTRY_DSN__": true
   },
   "rules": {
     "prettier/prettier": "error",
