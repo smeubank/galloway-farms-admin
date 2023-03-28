@@ -22,7 +22,8 @@
   ],
   "globals": {
     "__MEDUSA_BACKEND_URL__": true,
-    "__SENTRY_DSN__": true
+    "__SENTRY_DSN__": true,
+    "__SENTRY_DEBUG__": true
   },
   "rules": {
     "prettier/prettier": "error",
