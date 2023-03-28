@@ -3,6 +3,7 @@ import type { PropsWithChildren } from "react"
 import React from "react"
 import { createRoot } from "react-dom/client"
 import * as Sentry from "@sentry/react";
+import { HttpClient as HttpClientIntegration } from "@sentry/integrations";
 import App from "./App"
 import "./assets/styles/global.css"
 import { LayeredModalProvider } from "./components/molecules/modal/layered-modal"
