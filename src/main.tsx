@@ -8,13 +8,13 @@ import "./assets/styles/global.css"
 import { LayeredModalProvider } from "./components/molecules/modal/layered-modal"
 import { SteppedProvider } from "./components/molecules/modal/stepped-modal"
 import { FeatureFlagProvider } from "./context/feature-flag"
-import { medusaUrl } from "./services/config"
+import { sentryDSN, medusaUrl } from "./services/config"
 import queryClient from "./services/queryClient"
 
-const SENTRY_DSN = process.env.SENTRY_DSN;
+// const SENTRY_DSN = process.env.SENTRY_DSN;
 
 Sentry.init({
-  dsn: SENTRY_DSN || "",
+  dsn: sentryDSN || "",
   debug: true,
   tracesSampleRate: 1.0,
   integrations: [

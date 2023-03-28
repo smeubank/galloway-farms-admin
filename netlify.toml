@@ -1,5 +1,6 @@
 [template.environment]
   MEDUSA_BACKEND_URL="URL of your Medusa Server"
+  SENTRY_DSN="URL with DSN of your Sentry project"
 
 [build]
   publish = "public/"
