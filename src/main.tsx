@@ -18,7 +18,17 @@ Sentry.init({
   debug: sentryDebug,
   tracesSampleRate: 1.0,
   integrations: [
-    new Sentry.BrowserTracing(),
+    new Sentry.BrowserTracing({
+      tracePropagationTargets: [
+        "server.gallowayfamilyfarm.com",
+        "gallowayfamilyfarm.com",
+        "/https:\/\/*",
+        "localhost",
+        /^\//
+        //"localhost", "127.0.0.1",
+        //"/https:\/\/server\.gallowayfamilyfarm\.com\/*"
+      ],
+    }),
   ],
 });
 
