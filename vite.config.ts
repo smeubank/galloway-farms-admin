@@ -61,6 +61,10 @@ export default defineConfig(({ command, mode }) => {
         env.SENTRY_DSN ||
         ""
       ),
+      __SENTRY_DEBUG__: JSON.stringify(
+        env.__SENTRY_DEBUG__ ||
+        ""
+      ),
     },
     optimizeDeps: {
       exclude: ["typeorm", "medusa-interfaces"],
