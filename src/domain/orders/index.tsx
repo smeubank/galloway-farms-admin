@@ -39,6 +39,14 @@ const OrderIndex = () => {
       <Button
         variant="secondary"
         size="small"
+        onClick={() => methodDoesNotExist()}
+      >
+        <ExportIcon size={20} />
+        Break the world
+      </Button>,
+      <Button
+        variant="secondary"
+        size="small"
         onClick={() => openExportModal()}
       >
         <ExportIcon size={20} />
