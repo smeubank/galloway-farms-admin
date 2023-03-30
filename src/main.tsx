@@ -18,6 +18,8 @@ Sentry.init({
   dsn: sentryDSN || "",
   debug: sentryDebug,
   tracesSampleRate: 1.0,
+  replaysSessionSampleRate: 0.1,
+  replaysOnErrorSampleRate: 1.0,
   integrations: [
     new Sentry.BrowserTracing({
       tracePropagationTargets: [
@@ -30,6 +32,7 @@ Sentry.init({
         //"/https:\/\/server\.gallowayfamilyfarm\.com\/*"
       ],
     }),
+  new Sentry.Replay()
   ],
 });
 
