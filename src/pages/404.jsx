@@ -8,7 +8,14 @@ const NotFoundPage = () => (
     <h1>NOT FOUND</h1>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     <p>
-      <button onClick={() => methodDoesNotExist()}>Break the world</button>
+    <Button
+        variant="secondary"
+        size="small"
+        onClick={() => methodDoesNotExist()}
+      >
+        <ExportIcon size={20} />
+        Break the world
+      </Button>
     </p>
   </Layout>
 )
