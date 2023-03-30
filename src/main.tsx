@@ -3,7 +3,7 @@ import type { PropsWithChildren } from "react"
 import React from "react"
 import { createRoot } from "react-dom/client"
 import * as Sentry from "@sentry/react";
-import { HttpClient as HttpClientIntegration } from "@sentry/integrations";
+import { HttpClient } from "@sentry/integrations";
 import App from "./App"
 import "./assets/styles/global.css"
 import { LayeredModalProvider } from "./components/molecules/modal/layered-modal"
@@ -32,7 +32,11 @@ Sentry.init({
         //"/https:\/\/server\.gallowayfamilyfarm\.com\/*"
       ],
     }),
-  new Sentry.Replay()
+    new Sentry.Replay(),
+    new HttpClient({
+      failedRequestStatusCodes: [[400, 499], [500-599]],
+      failedRequestTargets: ["/https:\/\/*"]
+  })
   ],
 });
 
